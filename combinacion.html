@@ -1,0 +1,42 @@
+<html>
+	<script type="text/javascript">
+		function Combinar(){
+			y = document.getElementById('num1').value;
+			x = document.getElementById('num2').value;
+			
+			a = parseInt(y);
+			b = parseInt(x);
+
+			res1=1;
+			res2=1;
+			res3=1;
+
+			arriba = a;
+			abajo = b;
+			abeja = a-b;
+
+			while(arriba>1){
+				 res1 = res1*arriba;
+           		 arriba = arriba-1;
+			}
+			while(abajo>1){
+				 res2 = res2*abajo;
+           		 abajo = abajo-1;
+			}
+			while(abeja>1){
+				 res3 = res3*abeja;
+           		 abeja = abeja-1;
+			}
+
+			res = res1 / (res2*res3);
+			document.getElementById('res').innerHTML =  res;
+			window.alert(res);
+		}
+	</script>
+	<body>
+		<input type="text" id="num1"/>
+		<input type="text" id="num2"/>
+		<button type="button" onclick="Combinar()">Combinar</button>
+		<p id = "res"></p>
+	</body>
+</html>

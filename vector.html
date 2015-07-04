@@ -1,0 +1,38 @@
+<html>
+	<script type="text/javascript">
+		function vector(){
+			ai = parseInt(document.getElementById('num1i').value);
+			aj = parseInt(document.getElementById('num1j').value);
+			ak = parseInt(document.getElementById('num1k').value);
+
+			bi = parseInt(document.getElementById('num2i').value);
+			bj = parseInt(document.getElementById('num2j').value);
+			bk = parseInt(document.getElementById('num2k').value);
+			
+
+			vi = (aj*bk) - (ak*bj);
+			vj = (-1)*((ai*bk)- (ak*bi));
+			vk = (ai*bj)- (aj*bi);
+			
+
+			document.getElementById('res').innerHTML =  vi+"i "+vj+"j "+vk+"k "	;
+			window.alert(vi+"i "+vj+"j "+vk+"k ");
+		}
+	</script>
+	<body>
+		Vector 1:
+		<br>
+		<input type="text" id="num1i"/> 
+		<input type="text" id="num1j"/>
+		<input type="text" id="num1k"/>
+		<br>
+		Vector 2:
+		<br>
+		<input type="text" id="num2i"/> 
+		<input type="text" id="num2j"/>
+		<input type="text" id="num2k"/>
+		<br>
+		<button type="button" onclick="vector()">Calcular Vector</button>
+		<p id = "res"></p>
+	</body>
+</html>

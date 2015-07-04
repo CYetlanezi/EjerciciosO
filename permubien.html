@@ -1,0 +1,36 @@
+<html>
+	<script type="text/javascript">
+		function Permutacion(){
+			y = document.getElementById('num1').value;
+			x = document.getElementById('num2').value;
+			
+			a = parseInt(y);
+			b = parseInt(x);
+
+			resa=1;
+			resab=1;
+
+			arriba = a;
+			abajo = b-a;
+
+			while(arriba>1){
+				 resa = resa*arriba;
+           		 arriba = arriba-1;
+			}
+			while(abajo>1){
+				 resab = resab*abajo;
+           		 abajo = abajo-1;
+			}
+
+			res = resa / resab;
+			document.getElementById('res').innerHTML =  res;
+			window.alert(res);
+		}
+	</script>
+	<body>
+		<input type="text" id="num1"/>
+		<input type="text" id="num2"/>
+		<button type="button" onclick="Permutacion()">Permutar</button>
+		<p id = "res"></p>
+	</body>
+</html>
