@@ -1,0 +1,37 @@
+<html>
+	<script type="text/javascript">
+		function Permutacion(){
+			
+			a = parseInt(document.getElementById('num1').value);
+
+			for (var i = 0; i <= a; i++) {
+			resa=1;
+			resab=1;
+
+			arriba = a;
+			abajo = a-i;
+
+			while(arriba>1){
+				 resa = resa*arriba;
+           		 arriba = arriba-1;
+			}
+			while(abajo>1){
+				 resab = resab*abajo;
+           		 abajo = abajo-1;
+			}
+
+			res = resa / resab;
+
+			window.alert(res);
+			};
+			
+		}
+	</script>
+	<body>
+		Dado un numero natural n, desplegar las primeras n permutaciones
+		<br>
+		<input type="text" id="num1"/>
+		<button type="button" onclick="Permutacion()">Permutar</button>
+		
+	</body>
+</html>
